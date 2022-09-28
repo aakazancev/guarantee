@@ -1,0 +1,117 @@
+.header{
+    padding: 68px 0 34px;
+
+    &__line{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__contact{
+        p {
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 14px;
+            color: #AFAFAF;
+        }
+
+        a {
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 37px;
+            font-family: 'Playfair Display';
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        @media (max-width: 1024px){
+            display: none;
+        }
+    }
+
+    &__burger{
+        display: grid;
+        gap: 5px;
+        position: relative;
+        top: -6px;
+        display: none;
+
+        @media (max-width: 1024px){
+            display: grid;
+        }
+        i{
+            width: 30px;
+            height: 3px;
+            background: #fff;
+        }
+    }
+    &__mm{
+        background: #1C1C1C;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        z-index: 10;
+        padding: 68px 24px;
+        max-width: 500px;
+        display: flex;
+        gap: 40px;
+        flex-direction: column;
+        visibility: hidden;
+        transform: translateX(100%);
+        transition: .4s;
+
+        &.show{
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        &-contact{
+            display: block;
+        }
+
+        &-top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-menu{
+            display: grid;
+            gap: 20px;
+
+            a{
+                text-decoration: none;
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+.overflow{
+    overflow: hidden;
+}
+.main-menu{
+    display: flex;
+    align-items: center;
+    gap: 34px;
+
+    @media (max-width: 1024px){
+        display: none;
+    }
+
+    a {
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: capitalize;
+        color: #AFAFAF;
+        text-decoration: none;
+        transition: .2s;
+        &:hover{
+            color: #fff;
+        }
+    }
+
+
+}

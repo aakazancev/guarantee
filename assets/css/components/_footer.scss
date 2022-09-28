@@ -1,0 +1,44 @@
+.footer{
+    &__line{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 1024px){
+            display: grid;
+            gap: 32px;
+        }
+    }
+
+    &__contact{
+        p {
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 14px;
+            color: #AFAFAF;
+        }
+
+        a {
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 37px;
+            font-family: 'Playfair Display';
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+    }
+
+    &__links{
+        text-align: center;
+        padding: 30px 0;
+    }
+    &__politic{
+        text-align: center;
+        margin: 0 auto;
+        font-size: 14px;
+        line-height: 17px;
+        text-decoration-line: underline;
+        color: #F2C94C;
+        opacity: 0.5;
+    }
+}

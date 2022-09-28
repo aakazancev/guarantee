@@ -1,0 +1,58 @@
+.step-work{
+    @include margin();
+
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px 60px;
+        max-width: 760px;
+        margin: 0 auto 44px;
+
+        @media (max-width: 1024px){
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item{
+        display: grid;
+        grid-template-columns: 30px 1fr;
+        gap: 10px;
+
+        &-count{
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            background: $own-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 14px;
+            line-height: 13px;
+            text-align: center;
+            color: #000000;
+        }
+
+        &-info{
+            display: grid;
+            gap: 4px;
+
+            h5{
+                font-size: 20px;
+                line-height: 115.38%;
+                color: #FFFFFF;
+            }
+            p{
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 115.38%;
+                color: #FFFFFF;
+            }
+        }
+    }
+
+    .form{
+        margin: 0 auto;
+        max-width: 760px;
+    }
+}

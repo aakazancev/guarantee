@@ -1,0 +1,107 @@
+.cta{
+    @include margin();
+    position: relative;
+
+    &__title{
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 55px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        max-width: 545px;
+        margin-bottom: 8px;
+        span{
+            color: $own-color;
+        }
+
+        @media (max-width: 1024px){
+            font-size: 26px;
+            line-height: 140%;
+        }
+    }
+
+    &__desc{
+        font-size: 16px;
+        line-height: 152.38%;
+        color: $second-color;
+        max-width: 415px;
+        margin-bottom: 40px;
+        position: relative;
+        display: grid;
+        grid-template-columns: 34px 1fr;
+        gap: 0 16px;
+
+        @media (max-width: 1024px){
+          grid-template-columns: 1fr;
+          gap: 0;
+          display: block;
+          margin-bottom: 16px;
+        }
+
+        span{
+            color: $primary-color;
+            grid-column-start: 2;
+            grid-column-end: -1;
+        }
+
+        &::before{
+            width: 34px;
+            height: 2px;
+            display: block;
+            top: 10px;
+            position: relative;
+            content: "";
+            background: rgba(255, 255, 255, 0.2);
+
+            @media (max-width: 1024px){
+                display: none;
+            }
+        }
+    }
+
+    &__img{
+       max-width: 723px; 
+       position: absolute;
+       top: 0;
+       right: 0;
+       pointer-events: none;
+
+       @media (max-width: 1024px){
+        display: none;
+       }
+    }
+
+}
+
+.form-cta{
+    max-width: 630px;
+
+    &__top{
+        max-width: 495px;
+        p{
+            font-size: 16px;
+            line-height: 152.38%;
+            color: $second-color;
+            margin-bottom: 12px !important;
+
+            span{
+                color: $primary-color;
+            }
+        }
+    }
+
+    &__bottom{
+        display: grid;
+        grid-template-columns: 2fr 2fr 1.8fr;
+        gap: 12px;
+
+        @media (max-width: 1024px){
+            grid-template-columns: 1fr;
+        }
+
+        p{
+            grid-column-start: 1;
+            grid-column-end: -1;
+        }
+    }
+}

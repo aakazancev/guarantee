@@ -1,0 +1,47 @@
+.contact{
+    margin-bottom: 100px;
+
+    &__columns{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px;
+        align-items: center;
+
+        @media (max-width: 1024px){
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__map{
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @media (max-width: 1024px){
+            grid-row-start: 1;
+        }
+
+        &-item{
+            h5{
+                font-weight: 500;
+                font-size: 22px;
+                line-height: 29px;
+                text-transform: uppercase;
+                color: #828282;
+                margin-bottom: 8px;
+            }
+            p, a{
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 115.38%;
+                color: #FFFFFF;
+                text-decoration: none;
+            }
+        }
+    }
+}
